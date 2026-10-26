@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="color-scheme" content="dark"><title>StarMarket</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <header class="top"><div class="logo">✦ StarMarket</div><span id="user-label">Telegram do‘koni</span></header>
+  <main>
+    <section class="panel"><div class="section-title"><h2>Katalog</h2><button id="reload" class="secondary">Yangilash</button></div>
+      <div id="products" class="products"><p class="muted">Mahsulotlar yuklanmoqda…</p></div></section>
+
+    <section class="panel" id="checkout" hidden>
+      <h2>Buyurtma</h2>
+      <p id="selected" class="muted"></p>
+      <form id="order-form">
+        <label>Qabul qiluvchi Telegram username<input id="username" required placeholder="@username" maxlength="33" autocomplete="off"></label>
+        <label id="qty-label">Miqdor<input id="quantity" type="number" min="1" max="100" value="1" required></label>
+        <p id="total" class="price"></p>
+        <button type="submit" id="submit">Buyurtma berish</button>
+      </form>
+      <p class="muted">🔒 Parol yoki SMS-kod hech qachon so‘ralmaydi.</p>
+    </section>
+
+    <section class="panel" id="pay" hidden>
+      <h2>To‘lov</h2>
+      <pre id="pay-text"></pre>
+      <p id="pay-order" class="muted"></p>
+      <p>To‘lagach, <b>chek rasmini bot chatiga yuboring</b>. Admin tasdiqlagach buyurtma bajariladi.</p>
+      <button id="close-app" class="secondary">Bot chatiga qaytish</button>
+    </section>
+
+    <section class="panel"><div class="section-title"><h2>Buyurtmalarim</h2><button id="reload-orders" class="secondary">Yangilash</button></div>
+      <div id="orders"><p class="muted">Yuklanmoqda…</p></div></section>
+    <p id="error" class="err" role="alert"></p>
+  </main>
+  <footer>StarMarket · to‘lovlar admin tomonidan qo‘lda tasdiqlanadi</footer>
+  <script src="config.js"></script><script src="app.js"></script>
+</body></html>

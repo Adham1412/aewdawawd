@@ -1,0 +1,18 @@
+<!doctype html><html lang="uz"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>StarMarket Admin</title>
+<link rel="stylesheet" href="style.css"><script src="https://telegram.org/js/telegram-web-app.js"></script></head>
+<body><header><strong>✦ StarMarket Admin</strong><span id="who">…</span></header>
+<main>
+  <nav class="tabs"><button data-tab="orders" class="on">Buyurtmalar</button><button data-tab="products">Mahsulotlar</button><button data-tab="stats">Statistika</button><button data-tab="audit">Audit</button></nav>
+  <p id="msg" class="msg" role="alert"></p>
+  <section id="tab-orders"><label>Holat <select id="flt"><option value="">Hammasi</option><option>PAYMENT_SUBMITTED</option><option>AWAITING_PAYMENT</option><option>PAID</option><option>PROCESSING</option><option>FAILED</option><option>REFUND_PENDING</option><option>COMPLETED</option><option>CANCELLED</option><option>REFUNDED</option></select></label><div id="orders"></div></section>
+  <section id="tab-products" hidden><div id="products"></div>
+    <form id="pform" class="card"><h3>Yangi mahsulot</h3>
+      <input name="code" placeholder="kod (masalan stars_100)" required pattern="[a-z0-9_\-]{2,64}">
+      <select name="category"><option value="stars">Stars</option><option value="premium">Premium</option></select>
+      <input name="name_uz" placeholder="Nomi (uz)" required><input name="name_ru" placeholder="Nomi (ru)" required><input name="name_en" placeholder="Name (en)" required>
+      <input name="amount" type="number" min="1" placeholder="Stars soni yoki Premium kunlari" required>
+      <input name="price" type="number" min="1" step="0.01" placeholder="Narx (so‘m)" required>
+      <button>Yaratish (nofaol holatda)</button></form></section>
+  <section id="tab-stats" hidden><pre id="stats"></pre></section>
+  <section id="tab-audit" hidden><pre id="audit"></pre></section>
+</main><script src="app.js"></script></body></html>

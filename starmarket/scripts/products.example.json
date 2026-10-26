@@ -1,0 +1,5 @@
+[
+  {"code": "stars_100",   "category": "stars",   "name_uz": "100 Stars",  "name_ru": "100 Stars",  "name_en": "100 Stars",  "amount": 100,  "price": "REPLACE_WITH_YOUR_PRICE"},
+  {"code": "stars_500",   "category": "stars",   "name_uz": "500 Stars",  "name_ru": "500 Stars",  "name_en": "500 Stars",  "amount": 500,  "price": "REPLACE_WITH_YOUR_PRICE"},
+  {"code": "premium_3m",  "category": "premium", "name_uz": "Premium 3 oy", "name_ru": "Premium 3 мес", "name_en": "Premium 3 months", "amount": 90, "price": "REPLACE_WITH_YOUR_PRICE"}
+]

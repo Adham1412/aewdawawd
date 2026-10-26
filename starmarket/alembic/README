@@ -1,0 +1,5 @@
+Generate a migration after reviewing model changes:
+  alembic revision --autogenerate -m "initial schema"
+Review the generated migration before applying:
+  alembic upgrade head
+Never use Base.metadata.create_all in production.
